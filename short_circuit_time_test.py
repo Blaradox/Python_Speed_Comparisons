@@ -16,19 +16,15 @@ def is_palindrome_sc(s: str) -> bool:
 
 def main():
     print('Check if "1234567890987654321" is a palindrome')
-    print(
-        '\twith if statements\t',
+    print('\twith if statements\t',
         timeit.timeit(lambda: is_palindrome_if("1234567890987654321"), number=1_000_000))
-    print(
-        '\twith short circuits\t',
+    print('\twith short circuits\t',
         timeit.timeit(lambda: is_palindrome_sc("1234567890987654321"), number=1_000_000))
 
     print('Check if "12345678900987654321" is a palindrome')
-    print(
-        '\twith if statements\t',
+    print('\twith if statements\t',
         timeit.timeit(lambda: is_palindrome_if("12345678900987654321"), number=1_000_000))
-    print(
-        '\twith short circuits\t',
+    print('\twith short circuits\t',
         timeit.timeit(lambda: is_palindrome_sc("12345678900987654321"), number=1_000_000))
 
 if __name__ == '__main__':
